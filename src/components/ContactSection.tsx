@@ -76,6 +76,7 @@ export default function ContactSection() {
         message: ""
       });
     } catch (error) {
+      console.log(error);
       toast({
         title: "Error",
         description: "There was an error sending your message. Please try again.",
@@ -100,7 +101,7 @@ export default function ContactSection() {
             <div className="lg:col-span-2">
               <p className="text-slate-300 mb-8 leading-relaxed">
                 Interested in working together? Have a project in mind or just want to say hello?
-                Feel free to reach out, and I'll get back to you as soon as possible.
+                Feel free to reach out, and I&apos;ll get back to you as soon as possible.
               </p>
               
               <div className="space-y-6">
