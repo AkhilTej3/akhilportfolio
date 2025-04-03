@@ -1,3 +1,10 @@
+// Import the project images
+import foodOrderingAppImage from '@/assets/projects/food-ordering-app.svg';
+import streamingPlatformImage from '@/assets/projects/streaming-platform.svg';
+import quantumVpnImage from '@/assets/projects/quantum-vpn.svg';
+import ragPipelineImage from '@/assets/projects/rag-pipeline.svg';
+import complianceSystemImage from '@/assets/projects/compliance-system.svg';
+
 export interface Project {
   id: number;
   title: string;
@@ -5,6 +12,7 @@ export interface Project {
   technologies: string[];
   projectUrl: string;
   githubUrl: string;
+  imagePath: string;
   imageFallback: string;
 }
 
@@ -16,6 +24,7 @@ export const projects: Project[] = [
     technologies: ["Node.js", "SQL", "React.js", "React Native", "AWS", "WebSockets"],
     projectUrl: "#",
     githubUrl: "#",
+    imagePath: foodOrderingAppImage,
     imageFallback: "Mobile app for pre-ordering food and beverages"
   },
   {
@@ -25,6 +34,7 @@ export const projects: Project[] = [
     technologies: ["React Native", "Mobile Authentication", "Content Search API", "UI/UX Design"],
     projectUrl: "#",
     githubUrl: "#",
+    imagePath: streamingPlatformImage,
     imageFallback: "Video streaming application interface"
   },
   {
@@ -34,6 +44,7 @@ export const projects: Project[] = [
     technologies: ["Post-Quantum Cryptography", "Secure Communication", "VPN", "Encryption"],
     projectUrl: "#",
     githubUrl: "#",
+    imagePath: quantumVpnImage,
     imageFallback: "Secure VPN tunnel with quantum encryption"
   },
   {
@@ -43,6 +54,7 @@ export const projects: Project[] = [
     technologies: ["Langchain", "Generative AI", "Document Processing", "Python"],
     projectUrl: "#",
     githubUrl: "#",
+    imagePath: ragPipelineImage,
     imageFallback: "AI document comparison system"
   },
   {
@@ -52,6 +64,7 @@ export const projects: Project[] = [
     technologies: ["Node.js", "React.js", "Survey API", "Risk Analysis"],
     projectUrl: "#",
     githubUrl: "#",
+    imagePath: complianceSystemImage,
     imageFallback: "Compliance management dashboard"
   }
 ];
