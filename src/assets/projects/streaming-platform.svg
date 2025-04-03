@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E50914" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#6A0DAD" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- TV/Monitor Outline -->
+  <rect x="150" y="100" width="500" height="320" rx="10" fill="#1E1E1E" />
+  <rect x="165" y="115" width="470" height="290" rx="5" fill="#111" />
+  
+  <!-- TV Stand -->
+  <path d="M350 420 L450 420 L425 480 L375 480 Z" fill="#1E1E1E" />
+  <rect x="370" y="480" width="60" height="10" rx="2" fill="#1E1E1E" />
+  
+  <!-- Streaming UI Elements -->
+  <!-- Header Menu -->
+  <rect x="165" y="115" width="470" height="60" fill="#222" />
+  <circle cx="195" cy="145" r="15" fill="#E50914" />
+  <rect x="230" y="140" width="40" height="10" rx="5" fill="#777" />
+  <rect x="290" y="140" width="40" height="10" rx="5" fill="#777" />
+  <rect x="350" y="140" width="40" height="10" rx="5" fill="#777" />
+  <rect x="410" y="140" width="40" height="10" rx="5" fill="#777" />
+  <rect x="565" y="140" width="50" height="10" rx="5" fill="#E50914" />
+  
+  <!-- Main Content -->
+  <rect x="180" y="190" width="440" height="200" rx="5" fill="#333" />
+  
+  <!-- Video Player Elements -->
+  <rect x="200" y="210" width="400" height="140" rx="3" fill="#000" />
+  
+  <!-- Play Button -->
+  <circle cx="400" cy="280" r="25" fill="#E50914" opacity="0.8" />
+  <path d="M395 270 L415 280 L395 290 Z" fill="#FFF" />
+  
+  <!-- Video Progress Bar -->
+  <rect x="200" y="360" width="400" height="5" rx="2" fill="#444" />
+  <rect x="200" y="360" width="250" height="5" rx="2" fill="#E50914" />
+  
+  <!-- Control Buttons -->
+  <circle cx="230" cy="380" r="10" fill="#555" />
+  <circle cx="260" cy="380" r="10" fill="#555" />
+  <rect x="280" y="375" width="40" height="10" rx="5" fill="#555" />
+  
+  <rect x="530" y="375" width="30" height="10" rx="5" fill="#555" />
+  <rect x="570" y="375" width="30" height="10" rx="5" fill="#555" />
+  
+  <!-- Mobile Device View -->
+  <rect x="600" y="220" width="120" height="200" rx="10" fill="#222" />
+  <rect x="610" y="235" width="100" height="170" rx="5" fill="#111" />
+  
+  <!-- Mobile UI Elements -->
+  <rect x="620" y="245" width="80" height="45" rx="3" fill="#333" />
+  <rect x="620" y="300" width="80" height="45" rx="3" fill="#333" />
+  <rect x="620" y="355" width="80" height="40" rx="3" fill="#333" />
+  
+  <!-- Play Icon on Mobile -->
+  <circle cx="660" cy="270" r="8" fill="#E50914" opacity="0.8" />
+  <path d="M657 265 L667 270 L657 275 Z" fill="#FFF" />
+</svg>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A0E4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0041C2" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Lock Shield Shape -->
+  <path d="M400 120 L530 180 L530 300 C530 350 480 400 400 440 C320 400 270 350 270 300 L270 180 Z" fill="#111" />
+  <path d="M400 140 L515 195 L515 300 C515 340 470 385 400 420 C330 385 285 340 285 300 L285 195 Z" fill="#222" />
+  
+  <!-- Quantum Circuit Patterns -->
+  <line x1="340" y1="210" x2="460" y2="210" stroke="#00A0E4" stroke-width="2" />
+  <line x1="340" y1="250" x2="460" y2="250" stroke="#00A0E4" stroke-width="2" />
+  <line x1="340" y1="290" x2="460" y2="290" stroke="#00A0E4" stroke-width="2" />
+  <line x1="340" y1="330" x2="460" y2="330" stroke="#00A0E4" stroke-width="2" />
+  
+  <line x1="340" y1="210" x2="340" y2="330" stroke="#00A0E4" stroke-width="2" />
+  <line x1="370" y1="210" x2="370" y2="330" stroke="#00A0E4" stroke-width="2" />
+  <line x1="400" y1="210" x2="400" y2="330" stroke="#00A0E4" stroke-width="2" />
+  <line x1="430" y1="210" x2="430" y2="330" stroke="#00A0E4" stroke-width="2" />
+  <line x1="460" y1="210" x2="460" y2="330" stroke="#00A0E4" stroke-width="2" />
+  
+  <!-- Quantum Gates -->
+  <rect x="365" y="205" width="10" height="10" fill="#00A0E4" />
+  <rect x="395" y="245" width="10" height="10" fill="#00A0E4" />
+  <rect x="425" y="285" width="10" height="10" fill="#00A0E4" />
+  <rect x="335" y="325" width="10" height="10" fill="#00A0E4" />
+  <rect x="455" y="205" width="10" height="10" fill="#00A0E4" />
+  
+  <!-- Lock Keyhole -->
+  <circle cx="400" cy="270" r="40" fill="#333" />
+  <path d="M400 250 L400 290 L420 300 Z" fill="#00A0E4" />
+  
+  <!-- Network Connection Lines -->
+  <line x1="270" y1="250" x2="200" y2="200" stroke="#00A0E4" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="270" y1="300" x2="180" y2="350" stroke="#00A0E4" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="530" y1="250" x2="600" y2="200" stroke="#00A0E4" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="530" y1="300" x2="620" y2="350" stroke="#00A0E4" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Connected Devices -->
+  <rect x="150" y="180" width="50" height="40" rx="5" fill="#222" />
+  <rect x="130" y="350" width="50" height="30" rx="5" fill="#222" />
+  <rect x="600" y="180" width="50" height="40" rx="5" fill="#222" />
+  <rect x="620" y="350" width="50" height="30" rx="5" fill="#222" />
+  
+  <!-- Binary Data Flow -->
+  <text x="220" y="220" font-family="monospace" font-size="12" fill="#00A0E4">10110</text>
+  <text x="200" y="370" font-family="monospace" font-size="12" fill="#00A0E4">01001</text>
+  <text x="550" y="220" font-family="monospace" font-size="12" fill="#00A0E4">11010</text>
+  <text x="570" y="370" font-family="monospace" font-size="12" fill="#00A0E4">10101</text>
+  
+  <!-- Quantum Secure Label -->
+  <rect x="320" y="450" width="160" height="40" rx="20" fill="#00A0E4" opacity="0.8" />
+  <text x="340" y="475" font-family="Arial" font-size="16" font-weight="bold" fill="white">QUANTUM SECURE</text>
+</svg>

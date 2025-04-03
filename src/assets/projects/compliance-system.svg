@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Dashboard Main Panel -->
+  <rect x="150" y="100" width="500" height="400" rx="10" fill="#222" />
+  <rect x="160" y="110" width="480" height="380" rx="5" fill="#333" />
+  
+  <!-- Dashboard Header -->
+  <rect x="160" y="110" width="480" height="60" rx="5" fill="#4F46E5" />
+  <text x="190" y="145" font-family="Arial" font-size="18" font-weight="bold" fill="white">Compliance Management Dashboard</text>
+  <circle cx="600" cy="140" r="15" fill="#EEE" />
+  <circle cx="560" cy="140" r="15" fill="#EEE" />
+  
+  <!-- Left Sidebar -->
+  <rect x="160" y="170" width="120" height="320" rx="5" fill="#222" />
+  
+  <!-- Navigation Menu Items -->
+  <rect x="170" y="190" width="100" height="30" rx="5" fill="#4F46E5" />
+  <text x="185" y="210" font-family="Arial" font-size="12" fill="white">Dashboard</text>
+  
+  <rect x="170" y="230" width="100" height="30" rx="5" fill="#444" />
+  <text x="185" y="250" font-family="Arial" font-size="12" fill="#CCC">Reports</text>
+  
+  <rect x="170" y="270" width="100" height="30" rx="5" fill="#444" />
+  <text x="185" y="290" font-family="Arial" font-size="12" fill="#CCC">Surveys</text>
+  
+  <rect x="170" y="310" width="100" height="30" rx="5" fill="#444" />
+  <text x="185" y="330" font-family="Arial" font-size="12" fill="#CCC">Analytics</text>
+  
+  <rect x="170" y="350" width="100" height="30" rx="5" fill="#444" />
+  <text x="185" y="370" font-family="Arial" font-size="12" fill="#CCC">Settings</text>
+  
+  <rect x="170" y="390" width="100" height="30" rx="5" fill="#444" />
+  <text x="185" y="410" font-family="Arial" font-size="12" fill="#CCC">Help</text>
+  
+  <!-- Main Content Area -->
+  <rect x="290" y="170" width="340" height="320" rx="5" fill="#2A2A2A" />
+  
+  <!-- Risk Gauge -->
+  <circle cx="360" cy="240" r="60" fill="none" stroke="#666" stroke-width="10" />
+  <path d="M360 240 L360 190 A50 50 0 0 1 403 221 Z" fill="#4F46E5" />
+  <circle cx="360" cy="240" r="40" fill="#333" />
+  <text x="345" y="245" font-family="Arial" font-size="16" font-weight="bold" fill="white">76%</text>
+  <text x="335" y="300" font-family="Arial" font-size="14" fill="#CCC">Risk Score</text>
+  
+  <!-- Compliance Chart Bars -->
+  <rect x="460" y="200" width="30" height="100" rx="3" fill="#4F46E5" />
+  <rect x="500" y="230" width="30" height="70" rx="3" fill="#7C3AED" />
+  <rect x="540" y="180" width="30" height="120" rx="3" fill="#4F46E5" />
+  <rect x="580" y="250" width="30" height="50" rx="3" fill="#7C3AED" />
+  
+  <line x1="460" y1="310" x2="610" y2="310" stroke="#666" stroke-width="2" />
+  <text x="500" y="330" font-family="Arial" font-size="14" fill="#CCC">Compliance Metrics</text>
+  
+  <!-- Data Table -->
+  <rect x="300" y="360" width="320" height="120" rx="5" fill="#444" />
+  <line x1="300" y1="390" x2="620" y2="390" stroke="#666" stroke-width="1" />
+  <line x1="300" y1="420" x2="620" y2="420" stroke="#666" stroke-width="1" />
+  <line x1="300" y1="450" x2="620" y2="450" stroke="#666" stroke-width="1" />
+  
+  <line x1="400" y1="360" x2="400" y2="480" stroke="#666" stroke-width="1" />
+  <line x1="500" y1="360" x2="500" y2="480" stroke="#666" stroke-width="1" />
+  
+  <text x="320" y="380" font-family="Arial" font-size="12" fill="#CCC">Regulation</text>
+  <text x="420" y="380" font-family="Arial" font-size="12" fill="#CCC">Status</text>
+  <text x="520" y="380" font-family="Arial" font-size="12" fill="#CCC">Due Date</text>
+  
+  <text x="320" y="410" font-family="Arial" font-size="10" fill="#FFF">GDPR</text>
+  <text x="420" y="410" font-family="Arial" font-size="10" fill="#4F46E5">Compliant</text>
+  <text x="520" y="410" font-family="Arial" font-size="10" fill="#FFF">07/15/2023</text>
+  
+  <text x="320" y="440" font-family="Arial" font-size="10" fill="#FFF">PCI DSS</text>
+  <text x="420" y="440" font-family="Arial" font-size="10" fill="#FF6B6B">At Risk</text>
+  <text x="520" y="440" font-family="Arial" font-size="10" fill="#FFF">09/30/2023</text>
+  
+  <text x="320" y="470" font-family="Arial" font-size="10" fill="#FFF">HIPAA</text>
+  <text x="420" y="470" font-family="Arial" font-size="10" fill="#4F46E5">Compliant</text>
+  <text x="520" y="470" font-family="Arial" font-size="10" fill="#FFF">11/15/2023</text>
+</svg>
