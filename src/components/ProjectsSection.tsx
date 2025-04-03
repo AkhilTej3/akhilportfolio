@@ -1,9 +1,9 @@
 "use client"
 import { useRef } from "react";
+import Image from "next/image";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { projects } from "@/data/projectsData";
 import { Github, ArrowRight } from "lucide-react";
-
 export default function ProjectsSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const isIntersecting = useIntersectionObserver({
@@ -43,15 +43,23 @@ export default function ProjectsSection() {
                     ${project.id === 5 ? 'bg-gradient-to-br from-indigo-600/20 to-violet-800/40' : ''}
                   `}
                 >
-                  {/* Project Image */}
-                  <img 
-                    src={project.imagePath} 
-                    alt={project.imageFallback}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                  
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-70"></div>
+                  <div className="relative w-full h-full">
+                    <Image 
+                      src={project.imagePath}
+                      alt={project.imageFallback}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover hover:scale-105 transition-transform duration-500"
+                      priority={index < 3}
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = '/images/fallback-project.jpg';
+                      }}
+                    />
+                    
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-70"></div>
+                  </div>
                 </div>
               </div>
               <div className="p-6">

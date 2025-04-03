@@ -9,11 +9,11 @@ export interface Project {
   id: number;
   title: string;
   description: string;
+  imagePath: string; // Should start with '/images/projects/'
+  imageFallback: string;
   technologies: string[];
   projectUrl: string;
   githubUrl: string;
-  imagePath: string;
-  imageFallback: string;
 }
 
 export const projects: Project[] = [

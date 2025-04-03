@@ -46,9 +46,9 @@ export default function Home() {
 
   return (
     <>
-      {isLoading && (
+      {/* {isLoading && (
         <LoadingOverlay progress={loadingProgress} text={loadingText} />
-      )}
+      )} */}
       <ThreeCanvas />
       <Navigation />
       <main>

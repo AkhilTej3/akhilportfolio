@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef, useState,useEffect } from "react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { useToast } from "@/hooks/use-toast";
 
@@ -26,7 +26,8 @@ export default function ContactSection() {
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+  const [mailtoData, setMailtoData] = useState<{ subject: string; body: string } | null>(null);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -34,6 +35,16 @@ export default function ContactSection() {
       [name]: value
     }));
   };
+
+  useEffect(() => {
+    if (mailtoData) {
+      const mailtoLink = `mailto:akhildharmana@gmail.com?subject=${encodeURIComponent(
+        mailtoData.subject
+      )}&body=${encodeURIComponent(mailtoData.body)}`;
+      window.location.href = mailtoLink;
+      setMailtoData(null);
+    }
+  }, [mailtoData]);
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,7 +72,11 @@ export default function ContactSection() {
     
     try {
       // This would be a real API call in production
-      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      setMailtoData({
+        subject: formData.subject,
+        body: `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      });
       
       toast({
         title: "Message sent!",
@@ -143,20 +158,20 @@ export default function ContactSection() {
                   <div className="bg-dark-200 rounded-full p-3 mr-4">
                     <i className="ri-links-line text-xl text-primary"></i>
                   </div>
-                  <div>
-                    <h4 className="text-white font-medium mb-1">Social</h4>
-                    <div className="flex space-x-4 mt-2">
-                      <a href="#" className="text-slate-400 hover:text-primary transition-colors" aria-label="GitHub">
-                        <i className="ri-github-fill text-xl"></i>
-                      </a>
-                      <a href="https://www.linkedin.com/in/akhil-dharmana/" className="text-slate-400 hover:text-primary transition-colors" aria-label="LinkedIn">
-                        <i className="ri-linkedin-fill text-xl"></i>
-                      </a>
-                      <a href="#" className="text-slate-400 hover:text-primary transition-colors" aria-label="Twitter">
-                        <i className="ri-twitter-fill text-xl"></i>
-                      </a>
-                    </div>
-                  </div>
+                    {/* <div>
+                      <h4 className="text-white font-medium mb-1">Social</h4>
+                      <div className="flex space-x-4 mt-2">
+                        <a href="#" className="text-slate-400 hover:text-primary transition-colors" aria-label="GitHub">
+                          <i className="ri-github-fill text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/akhil-dharmana/" className="text-slate-400 hover:text-primary transition-colors" aria-label="LinkedIn">
+                          <i className="ri-linkedin-fill text-xl"></i>
+                        </a>
+                        <a href="#" className="text-slate-400 hover:text-primary transition-colors" aria-label="Twitter">
+                          <i className="ri-twitter-fill text-xl"></i>
+                        </a>
+                      </div>
+                    </div> */}
                 </div>
               </div>
             </div>
@@ -170,7 +185,7 @@ export default function ContactSection() {
                       type="text" 
                       id="name" 
                       name="name" 
-                      className="w-full bg-dark-200 border border-dark-100 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full bg-dark-200 border border-dark-100 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-primary"
                       placeholder="Your name"
                       value={formData.name}
                       onChange={handleInputChange}
@@ -183,7 +198,7 @@ export default function ContactSection() {
                       type="email" 
                       id="email" 
                       name="email" 
-                      className="w-full bg-dark-200 border border-dark-100 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full bg-dark-200 border border-dark-100 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-primary"
                       placeholder="Your email"
                       value={formData.email}
                       onChange={handleInputChange}
@@ -198,7 +213,7 @@ export default function ContactSection() {
                     type="text" 
                     id="subject" 
                     name="subject" 
-                    className="w-full bg-dark-200 border border-dark-100 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full bg-dark-200 border border-dark-100 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="Subject"
                     value={formData.subject}
                     onChange={handleInputChange}
@@ -212,7 +227,7 @@ export default function ContactSection() {
                     id="message" 
                     name="message" 
                     rows={5}
-                    className="w-full bg-dark-200 border border-dark-100 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full bg-dark-200 border border-dark-100 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="Your message"
                     value={formData.message}
                     onChange={handleInputChange}
