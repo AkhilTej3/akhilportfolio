@@ -1,7 +1,8 @@
-"use client";
+"use client"
 import { useRef } from "react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { projects } from "@/data/projectsData";
+import { Github, ArrowRight } from "lucide-react";
 
 export default function ProjectsSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -34,7 +35,7 @@ export default function ProjectsSection() {
             >
               <div className="h-48 overflow-hidden">
                 <div
-                  className={`w-full h-full flex items-center justify-center hover:scale-110 transition-transform duration-500
+                  className={`w-full h-full flex items-center justify-center transition-transform duration-500 relative
                     ${project.id === 1 ? 'bg-gradient-to-br from-orange-600/20 to-amber-800/40' : ''}
                     ${project.id === 2 ? 'bg-gradient-to-br from-red-600/20 to-purple-800/40' : ''}
                     ${project.id === 3 ? 'bg-gradient-to-br from-cyan-600/20 to-blue-800/40' : ''}
@@ -42,16 +43,15 @@ export default function ProjectsSection() {
                     ${project.id === 5 ? 'bg-gradient-to-br from-indigo-600/20 to-violet-800/40' : ''}
                   `}
                 >
-                  <div className="relative">
-                    <div className="absolute -inset-6 rounded-full opacity-20 animate-pulse-slow"></div>
-                    <div className="relative text-5xl p-6 rounded-full bg-dark-300/70 text-primary">
-                      {project.id === 1 && <i className="ri-restaurant-line"></i>} {/* Food ordering app */}
-                      {project.id === 2 && <i className="ri-movie-2-line"></i>} {/* OTT Streaming */}
-                      {project.id === 3 && <i className="ri-shield-keyhole-line"></i>} {/* VPN */}
-                      {project.id === 4 && <i className="ri-ai-generate"></i>} {/* RAG Pipeline */}
-                      {project.id === 5 && <i className="ri-file-list-3-line"></i>} {/* Compliance Management */}
-                    </div>
-                  </div>
+                  {/* Project Image */}
+                  <img 
+                    src={project.imagePath} 
+                    alt={project.imageFallback}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                  
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-70"></div>
                 </div>
               </div>
               <div className="p-6">
@@ -69,13 +69,13 @@ export default function ProjectsSection() {
                     href={project.projectUrl} 
                     className="text-primary hover:text-primary/80 flex items-center text-sm font-medium"
                   >
-                    View Project <i className="ri-arrow-right-line ml-1"></i>
+                    View Project <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
                   <a 
                     href={project.githubUrl} 
                     className="text-slate-400 hover:text-white transition-colors"
                   >
-                    <i className="ri-github-line text-lg"></i>
+                    <Github className="w-5 h-5" />
                   </a>
                 </div>
               </div>
@@ -88,7 +88,7 @@ export default function ProjectsSection() {
             href="#" 
             className="inline-flex items-center justify-center bg-dark-200 hover:bg-dark-100 text-white font-medium px-6 py-3 rounded-lg transition-colors"
           >
-            View All Projects <i className="ri-arrow-right-line ml-2"></i>
+            View All Projects <ArrowRight className="w-4 h-4 ml-2" />
           </a>
         </div>
       </div>
