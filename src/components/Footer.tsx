@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="mb-6 md:mb-0">
             <a href="#hero" className="text-white font-poppins font-bold text-xl flex items-center">
               <span className="text-accent mr-2">&lt;</span>
-              Akhil K.<span className="text-accent">/&gt;</span>
+              Akhil <span className="text-accent">/&gt;</span>
             </a>
             <p className="text-slate-400 text-sm mt-2">Full Stack Developer | Cloud Services | AI & ML</p>
           </div>

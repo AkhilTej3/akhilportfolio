@@ -77,14 +77,14 @@ export default function ProjectsSection() {
                     href={project.projectUrl} 
                     className="text-primary hover:text-primary/80 flex items-center text-sm font-medium"
                   >
-                    View Project <ArrowRight className="w-4 h-4 ml-1" />
+                    Contact for Demo <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
-                  <a 
+                  {/* <a 
                     href={project.githubUrl} 
                     className="text-slate-400 hover:text-white transition-colors"
                   >
                     <Github className="w-5 h-5" />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

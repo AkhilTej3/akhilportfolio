@@ -37,7 +37,7 @@ export default function AboutSection() {
                 With expertise spanning the entire development stack, I orchestrate <span className="text-primary font-semibold">seamless experiences</span> from database architecture to responsive interfaces. I bring ideas to life through code, combining technical precision with creative thinking to deliver solutions that exceed expectations.
               </p>
               <p className="text-slate-300 mb-6 leading-relaxed">
-                Beyond coding, I&apos;m dedicated to continuous learning and growth. A proud graduate with a <span className="text-primary font-semibold">B.Tech in Computer Science</span> from Gayatri Vidya Parishad College of Engineering (2020-2024), I blend academic foundations with hands-on experience to push the boundaries of what&apos;s possible in web development.
+                Beyond coding, I&apos;m dedicated to continuous learning and growth. A graduate with a <span className="text-primary font-semibold">B.Tech in Computer Science</span>, I blend academic foundations with hands-on experience to push the boundaries of what&apos;s possible in web development.
               </p>
               <div className="flex space-x-4 mt-8">
                 <a href="#" className="text-white hover:text-primary transition-colors" aria-label="GitHub">
