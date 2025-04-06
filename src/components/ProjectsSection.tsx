@@ -3,7 +3,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { projects } from "@/data/projectsData";
-import { Github, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 export default function ProjectsSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const isIntersecting = useIntersectionObserver({
